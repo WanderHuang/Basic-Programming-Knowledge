@@ -3,3 +3,5 @@
 pub mod roman_to_int;
 #[path = "algo/longest_common_prefix.rs"]
 pub mod longest_common_prefix;
+#[path = "algo/quick_sort.rs"]
+pub mod quick_sort;
