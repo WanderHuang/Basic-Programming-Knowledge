@@ -7,3 +7,5 @@ pub mod longest_common_prefix;
 pub mod quick_sort;
 #[path = "algo/search_insert.rs"]
 pub mod search_insert;
+#[path = "algo/combination_sum.rs"]
+pub mod combination_sum;
