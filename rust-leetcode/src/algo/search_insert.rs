@@ -45,6 +45,29 @@ pub fn run(nums: Vec<i32>, target: i32) -> i32 {
   return count + 1;
 }
 
+/// 上面那个是常规解法 O(n)
+/// 这个是高级解法，用折半查找
+/// 来自LeetCode上的题解
+pub fn run2(nums: Vec<i32>, target: i32) -> i32 {
+  if nums.len() == 0 {
+    return 0;
+  }
+
+  let mut left = 0;
+  let mut right = nums.len() - 1;
+
+  while left < right {
+    let mid = left + ((right - left) >> 1);
+    if target <= nums[mid] {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  (left + if target <= nums[left] { 0 } else { 1 }) as i32
+}
+
 #[cfg(test)]
 mod tests {
   use crate::search_insert;
