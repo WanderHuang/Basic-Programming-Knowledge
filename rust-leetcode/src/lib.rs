@@ -9,3 +9,5 @@ pub mod quick_sort;
 pub mod search_insert;
 #[path = "algo/combination_sum.rs"]
 pub mod combination_sum;
+#[path = "algo/four_sum.rs"]
+pub mod four_sum;
