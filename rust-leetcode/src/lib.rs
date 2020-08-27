@@ -11,3 +11,5 @@ pub mod search_insert;
 pub mod combination_sum;
 #[path = "algo/four_sum.rs"]
 pub mod four_sum;
+#[path = "algo/divide.rs"]
+pub mod divide;
