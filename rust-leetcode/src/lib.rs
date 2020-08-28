@@ -13,3 +13,5 @@ pub mod combination_sum;
 pub mod four_sum;
 #[path = "algo/divide.rs"]
 pub mod divide;
+#[path = "algo/next_permutation.rs"]
+pub mod next_permutation;
