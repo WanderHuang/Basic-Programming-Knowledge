@@ -17,3 +17,5 @@ pub mod divide;
 pub mod next_permutation;
 #[path = "algo/combination_sum2.rs"]
 pub mod combination_sum2;
+#[path = "algo/search_range.rs"]
+pub mod search_range;
