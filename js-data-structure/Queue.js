@@ -12,66 +12,132 @@
 // 5. length 读取队列长度
 // 6. isEmpty  是否为空
 
-function Queue(size = 10) {
+/**
+ * 队列
+ * 1. 用首尾指针来获取活动队列长度
+ * 2. 入队、出队不使用数组原生方法
+ * 3. 构造函数变量隐藏
+ * @param {*} size 初始化队列长度
+ */
+function Queue({ size = 10, name = 'Queue' }) {
+  // 避免this.xx直接访问，所有的数据包裹到内部变量，不推荐用户访问
   this._queue_ = {
     size,
+    name,
     front: 0,
     rear: 0,
     list: [],
-  }
+  };
 }
 
 Queue.prototype = {
+  /**
+   * 判定是否为空
+   */
   isEmpty: function () {
-    return  this._queue_.front === this._queue_.rear;
+    return this._queue_.front === this._queue_.rear;
   },
-  isFull: function() {
+  /**
+   * 判定是否为满
+   */
+  isFull: function () {
     return this.length() === this.maxSize();
   },
-  length: function() {
+  /**
+   * 当前长度
+   */
+  length: function () {
     return this._queue_.front - this._queue_.rear;
   },
-  maxSize: function() {
+  /**
+   * 最大值
+   */
+  maxSize: function () {
     return this._queue_.size;
   },
-  front: function() {
-    if (this._queue_.front > this._queue_.rear)  {
+  /**
+   * 头部数据，最新enqueue的数据
+   */
+  front: function () {
+    if (this._queue_.front > this._queue_.rear) {
       return this._queue_.list[this._queue_.front - 1];
     }
   },
-  rear: function() {
-    if (this._queue_.front > this._queue_.rear)  {
+  /**
+   * 尾部数据，最早enqueue的数据
+   */
+  rear: function () {
+    if (this._queue_.front > this._queue_.rear) {
       return this._queue_.list[this._queue_.rear];
     }
   },
-  enqueue: function(data) {
+  /**
+   * 入队
+   * @param {*} data 任意数据
+   */
+  enqueue: function (data) {
+    // 队列已满，无法入队
     if (this.length() >= this.maxSize()) {
-      return false
+      return false;
     }
     this._queue_.list.push(data);
     this._queue_.front++;
-    return true
-    
+    return true;
   },
-  dequeue: function() {
+  /**
+   * 出队
+   */
+  dequeue: function () {
     if (this._queue_.rear < this._queue_.front) {
-      return this._queue_.list[this._queue_.rear++];
+      let res = this._queue_.list[this._queue_.rear++];
+      // 垃圾回收
+      if (this._queue_.rear > 20) {
+        this.list();
+      }
+
+      return res;
     }
-    return false
+    // 没有数据
+    return false;
   },
-  list: function() {
+  /**
+   * 获取完整的队列，是一个数组
+   */
+  list: function () {
     let res = this._queue_.list.slice(this._queue_.rear, this._queue_.front);
     this._queue_.list = res;
     this._queue_.rear = 0;
     this._queue_.front = res.length;
-    return res;
-  }
-}
 
+    return res;
+  },
+  /**
+   * 打印
+   */
+  toString: function () {
+    let res = this._queue_.name + ' { ';
+    for (let i = this._queue_.rear; i < this._queue_.front; i++) {
+      let data = this._queue_.list[i];
+      if (typeof data.toString === 'function') {
+        res += data.toString();
+      } else {
+        res += String(data);
+      }
+
+      if (i !== this._queue_.front - 1) {
+        res += ', ';
+      }
+    }
+
+    res += ' }';
+
+    return res;
+  },
+};
 
 // test
-let q = new Queue(5);
-for(let i = 0; i < 5; i++) {
+let q = new Queue({ size: 6, name: 'JsQueue' });
+for (let i = 0; i < 5; i++) {
   q.enqueue(i);
   console.log(q.isEmpty(), q.length(), q.maxSize());
 }
@@ -93,3 +159,4 @@ q.dequeue();
 q.enqueue(1);
 console.log(q.front(), q.rear(), q.isEmpty(), q.length(), q.maxSize());
 console.log(q.list());
+console.log(q.toString());
