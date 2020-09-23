@@ -1,3 +1,3 @@
-# 从零开始学习计算机基础
+# Basic Programming, from 0 to 1
 
-目前还不成系统
+🏃 Keep running！
