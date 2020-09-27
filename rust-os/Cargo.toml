@@ -1,0 +1,45 @@
+[package]
+name = "rust-os"
+version = "0.1.0"
+authors = ["wander <junjiehuang@yeah.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bootloader = "0.9.4"
+
+# the profile used for `cargo build`
+[profile.dev]
+panic = "abort" # disable stack unwinding on panic
+
+# the profile used for `cargo build --release`
+[profile.release]
+panic = "abort" # disable stack unwinding on panic
+
+[package.metadata.bootimage]
+# The cargo subcommand that will be used for building the kernel.
+#
+# For building using the `cargo-xbuild` crate, set this to `xbuild`.
+build-command = ["xbuild"]
+# # The command invoked with the created bootimage (the "{}" will be replaced
+# # with the path to the bootable disk image)
+# # Applies to `bootimage run` and `bootimage runner`
+# run-command = ["qemu-system-x86_64", "-drive", "format=raw,file={}"]
+
+# # Additional arguments passed to the run command for non-test executables
+# # Applies to `bootimage run` and `bootimage runner`
+# run-args = []
+
+# # Additional arguments passed to the run command for test executables
+# # Applies to `bootimage runner`
+# test-args = []
+
+# # An exit code that should be considered as success for test executables
+# test-success-exit-code = {integer}
+
+# # The timeout for running a test through `bootimage test` or `bootimage runner` (in seconds)
+# test-timeout = 300
+
+# # Whether the `-no-reboot` flag should be passed to test executables
+# test-no-reboot = true
