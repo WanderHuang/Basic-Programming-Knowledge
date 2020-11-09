@@ -1,6 +1,6 @@
 # OS learning
 
-This is a repo following `rust_os`.
+This is a repo following [`rust_os`](https://github.com/phil-opp/blog_os).
 
 ## operations
 
