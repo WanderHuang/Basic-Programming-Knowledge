@@ -19,3 +19,5 @@ pub mod next_permutation;
 pub mod combination_sum2;
 #[path = "algo/search_range.rs"]
 pub mod search_range;
+#[path = "algo/longest_palindromic_substring.rs"]
+pub mod longest_palindromic_substring;
