@@ -21,3 +21,9 @@ pub mod combination_sum2;
 pub mod search_range;
 #[path = "algo/longest_palindromic_substring.rs"]
 pub mod longest_palindromic_substring;
+#[path = "algo/pivot_index.rs"]
+pub mod pivot_index;
+#[path = "algo/design_hash_map.rs"]
+pub mod design_hash_map;
+#[path = "algo/thousand_separator.rs"]
+pub mod thousand_separator;
