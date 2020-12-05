@@ -1,0 +1,20 @@
+{
+  "name": "react-mini",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --watch",
+    "serve": "http-server -p 8181 ."
+  },
+  "keywords": [],
+  "author": "wander",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "http-server": "^0.12.3",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
