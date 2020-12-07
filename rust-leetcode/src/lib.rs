@@ -27,3 +27,5 @@ pub mod pivot_index;
 pub mod design_hash_map;
 #[path = "algo/thousand_separator.rs"]
 pub mod thousand_separator;
+#[path = "algo/rotate.rs"]
+pub mod rotate;
