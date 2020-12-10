@@ -30,6 +30,8 @@ pub mod thousand_separator;
 #[path = "algo/rotate.rs"]
 pub mod rotate;
 
-// ====================== Medium ============================
+// ====================== DP ============================
 #[path = "algo/find_max_form.rs"]
 pub mod find_max_form;
+#[path = "algo/dp/count_numbers_with_unique_digits.rs"]
+pub mod count_numbers_with_unique_digits;
