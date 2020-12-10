@@ -35,3 +35,5 @@ pub mod rotate;
 pub mod find_max_form;
 #[path = "algo/dp/count_numbers_with_unique_digits.rs"]
 pub mod count_numbers_with_unique_digits;
+#[path = "algo/dp/max_profit.rs"]
+pub mod max_profit;

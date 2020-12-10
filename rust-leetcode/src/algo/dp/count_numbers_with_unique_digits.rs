@@ -28,6 +28,6 @@ mod tests {
     fn test() {
         let res = super::run(4);
 
-        assert_eq!(res, 0);
+        assert_eq!(res, 5275);
     }
 }
