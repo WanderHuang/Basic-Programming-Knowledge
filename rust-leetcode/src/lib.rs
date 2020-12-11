@@ -37,3 +37,5 @@ pub mod find_max_form;
 pub mod count_numbers_with_unique_digits;
 #[path = "algo/dp/max_profit.rs"]
 pub mod max_profit;
+#[path = "algo/dp/can_i_win.rs"]
+pub mod can_i_win;
