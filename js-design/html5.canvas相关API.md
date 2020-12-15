@@ -368,7 +368,6 @@ ctx.globalCompositeOperation = type // source-in source-out source-atop destinat
 ctx.clip()
 ```
 
-
 ## 动画
 
 ```javascript
