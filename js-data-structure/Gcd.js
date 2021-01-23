@@ -27,3 +27,7 @@ console.log(gcd(70, 49));
 
 
 //  方法：辗转相除
+
+
+
+module.exports = gcd;
