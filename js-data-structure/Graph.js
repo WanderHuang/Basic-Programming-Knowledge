@@ -256,8 +256,6 @@ function checkExcel(cells) {
     }
   });
 
-  console.log(graph)
-
   return cycleCheck(graph).map((cycle) =>
     cycle.map((item) => numbMap.get(item))
   );
@@ -295,12 +293,6 @@ function checkExcel(cells) {
           }, []);
       }
     }
-
-    temps.forEach((item) => {
-      if (NUMB_REG.test(item)) {
-        console.log(`label ${label} found number: ${item}`);
-      }
-    });
 
     return sublabel;
   }
