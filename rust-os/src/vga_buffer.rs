@@ -147,7 +147,7 @@ pub fn print(s: &str, f: Color, b: Color) {
 use lazy_static::lazy_static;
 use spin::Mutex;
 
-/// 静态属性本来应该编译期确定 lazy把它放到后面确定
+// 静态属性本来应该编译期确定 lazy把它放到后面确定
 lazy_static! {
     pub static ref WRITER: Mutex<Writer> = Mutex::new(Writer {
         column_position: 0,

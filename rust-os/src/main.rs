@@ -30,7 +30,7 @@ pub extern "C" fn _start() -> ! {
     write!(vga_buffer::WRITER.lock(), ", some numbers: {} {}\n", 42, 1.337).unwrap();
 
     println!("Macro Function{}\n", "!");
-    panic!("Some panic message");
+    // panic!("Some panic message");
 
     loop {}
 }
