@@ -1,8 +1,8 @@
 function solveSuduku(board) {
   // 行、列、3*3
-  let row = new Array(9).fill(0).map((x) => new Array(9).fill(0));
-  let col = new Array(9).fill(0).map((x) => new Array(9).fill(0));
-  let box = new Array(9).fill(0).map((x) => new Array(9).fill(0));
+  let row = new Array(9).fill(0).map(() => new Array(9).fill(0));
+  let col = new Array(9).fill(0).map(() => new Array(9).fill(0));
+  let box = new Array(9).fill(0).map(() => new Array(9).fill(0));
 
 	
   for (let i = 0; i < 9; i++) {
