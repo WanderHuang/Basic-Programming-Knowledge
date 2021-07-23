@@ -1,19 +1,26 @@
-# Basic Programming, from 0 to 1
+# 编程的基础世界 学习永无止境
 
-🏃 Keep running！
+🏃 锲而不舍，金石可镂！
 
-## Recently
+## 最近
 
-- [I create a json parser in javascript](./js-design/json.parse.js)
-- [I create a json stringifier in javascript](./js-design/json.stringify.js)
+- [日常学习](https://github.com/WanderHuang/Basic-Programming-Knowledge/issues)
+- [JSON.parse实现](./js-design/json.parse.js)
+- [JSON.stringify实现](./js-design/json.stringify.js)
 
-## Careful
+## 关心内容
 
-Those need attention.
+- 计算机基础原理
+- 数据结构与算法
+- 网站基础架构
+- 流行技术趋势
+- 好用的工具
+- `JavaScript` ｜ `TypeScript` | `Haskell` | `Rust`···函数式编程，虽不能往，吾心向之。
 
-### [minimal-rust-kernel](https://os.phil-opp.com/minimal-rust-kernel/)
+## 公众号
 
-- BIOS(Basic Input/Output System) / UEFI(Unified Extensible Firmware Interface)
-- rust nightly
-- build target / llvm
-- build-std
+我常在这里写相关的知识，督促自己学习和进步。欢迎关注我，一起探索。
+
+![qrcode_for_gh_31a33753b708_258](https://user-images.githubusercontent.com/18475942/126742606-0f0eca11-0c38-4004-9ca4-a086048ce6fa.jpg)
+
+
